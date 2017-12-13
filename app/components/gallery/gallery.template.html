@@ -1,5 +1,5 @@
-<md-content flex id="content" layout="row" layout-wrap>
-    <div class="item" ng-repeat="item in $ctrl.data" flex="20">
+<md-content flex id="content" layout="row" layout-wrap type="{{$ctrl.parentCtrl.view | lowercase}}" filter="{{$ctrl.parentCtrl.filter | lowercase}}">
+    <div class="item" ng-repeat="item in $ctrl.data" flex-gt-sm="25" favorite="{{$ctrl.isFavorite(item.id)}}">
         <md-toolbar class="md-toolbar-tools">
             <h3>{{item.data.title}}</h3>
         </md-toolbar>
@@ -8,8 +8,11 @@
         </div>
         <div class="footer" layout="row" layout-align="center center">
             <p class="date" flex="90">{{item.data.published_at | amDateFormat:'YYYY.MM.DD'}}</p>
-            <md-button class="btn1" ng-click="$ctrl.onAdd();" flex="10">
+            <md-button class="btn1" ng-if="!$ctrl.isFavorite(item.id)" ng-click="$ctrl.onAddToFavorite(item.id);" flex="10">
                 <span translate>{{'BUTTON_ADD'}}</span>
+            </md-button>
+            <md-button class="btn1" ng-if="$ctrl.isFavorite(item.id)" ng-click="$ctrl.onRemoveFromFavorite(item.id);" flex="10">
+                <span translate>{{'BUTTON_REMOVE'}}</span>
             </md-button>
         </div>
     </div>

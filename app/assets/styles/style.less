@@ -24,6 +24,9 @@ header {
 #content {
     .item {
         padding: 1%;
+        .btn1 {
+            float: right;
+        }
         h3 {
             line-height: 110%;
             font-size: 100%;
@@ -38,6 +41,26 @@ header {
         p {
             padding: 0px;
             margin: 0px;
+        }
+    }
+
+    &[type="list"] {
+        display: block;
+        .item {
+            display: flex;
+            max-width: 100%;
+            .image {
+                display: none;
+            }
+            .date {
+                padding: 0px 1rem;
+            }
+        }
+    }
+
+    &[filter="favorites"] {
+        .item[favorite="false"] {
+            display: none;
         }
     }
 }

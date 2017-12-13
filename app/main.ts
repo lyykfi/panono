@@ -5,10 +5,13 @@ import { GalleryComponent } from "./components/gallery/gallery.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 
+import { ExploreFactory } from "./explore/explore.factory";
+
 import "angular-animate";
 import "angular-aria";
 import "angular-material";
 import "angular-messages";
+import "angular-moment";
 import "angular-translate";
 
 import "angular-material/angular-material.min.css";
@@ -25,7 +28,8 @@ import translations from "./assets/translates/en.js";
         GalleryComponent,
     ],
     id: "app",
-    imports: ["ngAnimate", "ngAria", "ngMaterial", "pascalprecht.translate"],
+    imports: ["ngAnimate", "ngAria", "ngMaterial", "pascalprecht.translate", "angularMoment"],
+    providers: [ExploreFactory],
 })
 export class AppModule {
     public static config($translateProvider) {

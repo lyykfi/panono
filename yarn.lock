@@ -83,6 +83,12 @@ angular-messages@^1.6.7:
   version "1.6.7"
   resolved "https://registry.yarnpkg.com/angular-messages/-/angular-messages-1.6.7.tgz#b82943d442929d787547814b394f3481bd36f7e0"
 
+angular-moment@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/angular-moment/-/angular-moment-1.2.0.tgz#a09e4902bc8d48ce06832af8c74169841b613bae"
+  dependencies:
+    moment ">=2.8.0 <3.0.0"
+
 angular-translate@^2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/angular-translate/-/angular-translate-2.16.0.tgz#6b7f84657d6534d25878cc55e6a2a06f7607299f"
@@ -2253,6 +2259,10 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
+
+"moment@>=2.8.0 <3.0.0":
+  version "2.19.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.4.tgz#17e5e2c6ead8819c8ecfad83a0acccb312e94682"
 
 ms@2.0.0:
   version "2.0.0"

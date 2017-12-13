@@ -1,8 +1,8 @@
 <md-sidenav md-component-id="left" class="md-sidenav-left">
     <md-toolbar class="md-toolbar-tools">
-        <h1>
-            <span translate>{{'SIDEBAR_TITLE'}}</span>
-            <md-button class="btn1" ng-click="$ctrl.onHide();">
+        <h1 layout="row" layout-align="center center">
+            <span translate flex="90">{{'SIDEBAR_TITLE'}}</span>
+            <md-button class="btn1" ng-click="$ctrl.onHide();" flex="10">
                 <span translate>{{'BUTTON_HIDE'}}</span>
             </md-button>
         </h1>
@@ -12,7 +12,7 @@
         <h2 translate>{{'VIEW_TITLE'}}</h2>
 
         <md-select ng-model="$ctrl.view" md-on-close="handleChangeView()">
-            <md-option translate value="GRID">{{'VIEW_GRID'}}</md-option>
+            <md-option translate selected value="GRID">{{'VIEW_GRID'}}</md-option>
             <md-option translate value="LIST">{{'VIEW_LIST'}}</md-option>
         </md-select>
     </md-content>
@@ -21,7 +21,7 @@
         <h2 translate>{{'FILTER_TITLE'}}</h2>
 
         <md-select ng-model="$ctrl.filter"  md-on-close="handleChangeFilter()">
-            <md-option translate value="ALL">{{'FILTER_ALL'}}</md-option>
+            <md-option translate selected value="ALL">{{'FILTER_ALL'}}</md-option>
             <md-option translate value="FAVORITES">{{'FILTER_FAVORITES'}}</md-option>
         </md-select>
     </md-content>

@@ -9,7 +9,7 @@ import * as templateUrl from "./gallery.template.html";
     },
 })
 export class GalleryComponent {
-    @Input() private data = [];
+    @Input() private data: any[] | null = null;
 
     private $scope;
 

@@ -1,6 +1,6 @@
 <md-content flex id="content" layout="row" layout-wrap type="{{$ctrl.parentCtrl.view | lowercase}}" filter="{{$ctrl.parentCtrl.filter | lowercase}}">
-    <div class="item" ng-repeat="item in $ctrl.data" flex-gt-sm="25" favorite="{{$ctrl.isFavorite(item.id)}}">
-        <md-toolbar class="md-toolbar-tools">
+    <div class="item" ng-if="$ctrl.data" ng-repeat="item in $ctrl.data" flex-gt-sm="25" favorite="{{$ctrl.isFavorite(item.id)}}">
+        <md-toolbar class="md-toolbar-tools title">
             <h3>{{item.data.title}}</h3>
         </md-toolbar>
         <div class="image">
@@ -16,4 +16,5 @@
             </md-button>
         </div>
     </div>
+    <div ng-if="!$ctrl.data" class="spinner"></div>
 </md-content>

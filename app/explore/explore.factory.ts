@@ -38,7 +38,7 @@ export class ExploreFactory {
             favorites.push(id);
         }
 
-        localStorage.setItem(JSON.stringify(favorites), this.storageName);
+        localStorage.setItem(this.storageName, JSON.stringify(favorites));
 
         return favorites;
     }

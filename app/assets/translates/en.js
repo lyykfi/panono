@@ -8,5 +8,7 @@ export default {
     VIEW_GRID: "Grid",
     VIEW_LIST: "List",
     FILTER_ALL: "All",
-    FILTER_FAVORITES: "Only Favorites"
+    FILTER_FAVORITES: "Only Favorites",
+    TITLE: "PANONO test",
+    EMPTY_LIST: "Gallery is empty"
 }

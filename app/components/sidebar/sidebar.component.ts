@@ -30,7 +30,7 @@ export class SidebarComponent {
      * @return {null}
      */
     private onHide() {
-        this.$mdSidenav("left").close();
+        this.$mdSidenav(this.parentCtrl.leftPanelId).close();
     }
 
     /**

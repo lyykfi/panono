@@ -5,6 +5,11 @@
         "sourceMap": true,
         "module": "commonjs",
         "target": "es5",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "types" : [
+            "angular",
+            "angular-mocks",
+            "jasmine"
+        ]
     }
 }

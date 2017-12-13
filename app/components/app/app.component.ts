@@ -6,11 +6,25 @@ import * as templateUrl from "./app.template.html";
     templateUrl: String(templateUrl),
 })
 export class AppComponent {
-    @Input() private view: string = "GRID";
+    @Input() private view: string;
 
-    @Input() private filter: string = "ALL";
+    @Input() private filter: string;
 
-    @Input() private favorites: string[] = [];
+    @Input() private favorites: string[];
+
+    @Input() private leftPanelId: string;
+
+    /**
+     *
+     * @method ngOnInit
+     * @return {null}
+     */
+    private ngOnInit() {
+        this.favorites = [];
+        this.leftPanelId = "left";
+        this.filter = "ALL";
+        this.view = "GRID";
+    }
 
     /**
      *

@@ -53101,7 +53101,7 @@ exports.ExploreFactory = ExploreFactory;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
-    SERVER: "http://api3-dev.panono.com/",
+    SERVER: "//api3-dev.panono.com/",
 };
 
 

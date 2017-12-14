@@ -46,6 +46,7 @@
     "scripts": {
         "prestart": "yarn install",
         "start": "webpack-dev-server",
-        "build": "rimraf dist & copyfiles -f src/index.html dist/ & copyfiles -f src/assets/* dist/assets & npm run webpack-prod"
+        "start-prod": "pm2 start ./app/server.js -i 0 --name 'prod test'",
+        "build": "rimraf dist && webpack --bail --progress --profile"
     }
 }

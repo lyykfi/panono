@@ -29,7 +29,9 @@ import translations from "./assets/translates/en.js";
     ],
     id: "app",
     imports: ["ngAnimate", "ngAria", "ngMaterial", "pascalprecht.translate", "angularMoment"],
-    providers: [ExploreFactory],
+    providers: [
+        {provide: "ExploreFactory", useClass: ExploreFactory},
+    ],
 })
 export class AppModule {
     /*@ngInject*/

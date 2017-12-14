@@ -32,6 +32,7 @@ import translations from "./assets/translates/en.js";
     providers: [ExploreFactory],
 })
 export class AppModule {
+    /*@ngInject*/
     public static config($translateProvider) {
         $translateProvider.translations("en", translations).preferredLanguage("en");
     }

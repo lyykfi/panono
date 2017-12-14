@@ -8,9 +8,6 @@ module.exports = {
     entry: {
         app: [
             "./app/main.ts"
-        ],
-        vendor: [
-            "angular/angular.js"
         ]
     },
     context: __dirname + "",
@@ -21,14 +18,15 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.tsx?$/,
-                loader: "ts-loader",
+                test: /\.ts?$/,
                 exclude: /node_modules/,
-            }, {
-                test: /\.ts$/,
-                enforce: "pre",
-                loader: "tslint-loader",
-                options: {}
+                use: [{
+                        loader: "ng-annotate-loader"
+                    },
+                    {
+                        loader: "ts-loader"
+                    }
+                ],
             },
             {
                 test: /\.html$/,
@@ -76,7 +74,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({ name: "vendor", filename: "vendors.js" }),
         new CopyWebpackPlugin([{ from: "./app/index.html", to: "./index.html" }])
     ],
     resolve: {

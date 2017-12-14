@@ -5,7 +5,7 @@ import * as templateUrl from "./sidebar.template.html";
     selector: "sidebar",
     templateUrl: String(templateUrl),
     require: {
-        parentCtrl: "^^app"
+        parentCtrl: "^^main"
     },
 })
 export class SidebarComponent {

@@ -5,7 +5,7 @@ import * as templateUrl from "./gallery.template.html";
     selector: "gallery",
     templateUrl: String(templateUrl),
     require: {
-        parentCtrl: "^^app"
+        parentCtrl: "^^main"
     },
 })
 export class GalleryComponent {

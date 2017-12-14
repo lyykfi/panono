@@ -5,7 +5,7 @@ import * as templateUrl from "./header.template.html";
     selector: "header",
     templateUrl: String(templateUrl),
     require: {
-        parentCtrl: "^^app"
+        parentCtrl: "^^main"
     },
 })
 export class HeaderComponent {
